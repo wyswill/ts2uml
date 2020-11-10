@@ -14,7 +14,7 @@ checkModule(no)->endScan
 
 ### 基本演示
 
-![示范图片](imgs/pic.png)
+![示范图片](https://github.com/wyswill/ts2uml/blob/master/imgs/pic.png)
 
 
 
