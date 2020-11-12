@@ -2,13 +2,13 @@
  * @LastEditors: wyswill
  * @Description: 文件描述
  * @Date: 2020-11-12 10:42:17
- * @LastEditTime: 2020-11-12 10:43:26
+ * @LastEditTime: 2020-11-12 16:35:49
  */
 const path = require("path");
+const MyPlugin = require("./src/index");
 module.exports = {
   mode: "development",
   entry: path.join(__dirname, "demo", "index"),
-  watch: true,
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/dist/",
@@ -28,11 +28,5 @@ module.exports = {
   resolve: {
     extensions: [".json", ".js", ".jsx"],
   },
-  devtool: "source-map",
-  devServer: {
-    contentBase: path.join(__dirname, "/dist/"),
-    inline: true,
-    host: "localhost",
-    port: 8080,
-  },
+  plugins: [new MyPlugin()],
 };
